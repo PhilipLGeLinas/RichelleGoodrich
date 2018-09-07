@@ -1,0 +1,456 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+header {
+    height: 15em;
+    width: 100%;
+    background: url('images/landscape.jpg') no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+header > h1 {
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    position: relative;
+    top: 35%;
+    padding: 0 0.1em;
+}
+
+nav {
+    width: 100%;
+    background-color: #222;
+    display: inline-block;
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 1;
+    box-shadow: 5px 5px 5px black;
+}
+
+.local {
+    display: block;
+    float: left;
+}
+
+#account {
+    display: none;
+}
+
+#current {
+    background-color: gold;
+}
+
+.social {
+    display: block;
+    float: right;
+}
+
+.links > a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.links > a:hover, .links > a:focus {
+    background-color: #555;
+}
+
+.links > a:hover .fa-envelope, .links > a:focus .fa-envelope {
+    color: rgb(246, 215, 101);
+}
+
+.links > a:hover .fa-tumblr, .links > a:focus .fa-tumblr {
+    color: rgb(51, 88, 121);
+}
+
+.links > a:hover .fa-linkedin-in, .links > a:focus .fa-linkedin-in {
+    color: rgb(0, 115, 187);
+}
+
+.links > a:hover .fa-google-plus-g, .links > a:focus .fa-google-plus-g {
+    color: rgb(248, 55, 31);
+}
+
+.links > a:hover .fa-instagram, .links > a:focus .fa-instagram {
+    color: rgb(255, 0, 95);
+}
+
+.links > a:hover .fa-pinterest-p, .links > a:focus .fa-pinterest-p {
+    color: rgb(204, 0, 0);
+}
+
+.links > a:hover .fa-twitter, .links > a:focus .fa-twitter {
+    color: rgb(0, 156, 250);
+}
+
+.links > a:hover .fa-facebook-f, .links > a:focus .fa-facebook-f {
+    color: rgb(64, 96, 184);
+}
+
+.col-100 {
+    width: 100%;
+    display: inline-block;
+    float: none;
+    padding: 0;
+}
+
+.col-100 > section {
+    height: auto;
+    margin-top: 0.5em;
+    background-color: #444;
+    color: white;
+    overflow: auto;
+    box-shadow: 5px 5px 5px black;
+}
+
+.col-80 {
+    width: 80%;
+    display: inline-block;
+    float: left;
+    padding-right: 0.5em;
+}
+
+.col-80 > section {
+    height: 30.5em;
+    margin-top: 0.5em;
+    background-color: #444;
+    color: white;
+    overflow: auto;
+    box-shadow: 5px 5px 5px black;
+}
+
+.col-33 {
+    width: 31.9%;
+    display: inline-block;
+    float: left;
+}
+
+.col-33 > section {
+    height: 206em;
+    margin-top: 0.5em;
+    background-color: #444;
+    color: white;
+    overflow: auto;
+    box-shadow: 5px 5px 5px black;
+    padding: 0.5em;
+}
+
+.leftcol {
+    margin-left: 1%;
+}
+
+.midcol {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.rightcol {
+    margin-right: 1%;
+}
+
+.main {
+    font-family: serif;
+}
+
+.titles {
+    text-shadow: 0.125em 0.125em 0 black;
+}
+
+.images {
+    float: left;
+    margin: 1em 1em 1em 1em;
+}
+
+#author {
+    border: 0.25em inset gold;
+    outline: 0.25em outset gold;
+}
+
+.flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    justify-content: center;
+    margin: 2em 0 1em 0;
+}
+
+#featured {
+    border: 0.25em inset white;
+    outline: 0.25em outset white;
+}
+
+.col-80 > .main > article {
+    padding: 1em 1em 1em 1em;
+}
+
+.col-100 > .main > article {
+    padding: 1em 1em 1em 1em;
+    text-align: center;
+}
+
+.col-20 {
+    width: 20%;
+    display: inline-block;
+}
+
+.col-20 > .book {
+    height: 15em;
+    margin-top: 0.5em;
+    background-size: 100% 100%;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black;
+}
+
+.col-100 > .book {
+    width: 33.33%;
+    float: left;
+    border: 0.1em solid white;
+    height: 15em;
+    margin-top: 0.5em;
+    background-size: 100% 100%;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black;
+}
+
+.book:nth-child(odd) {
+    background-image: url('images/bookshelf.jpg');
+}
+
+.book:nth-child(even) {
+    background-image: url('images/bookshelf2.jpg');
+}
+
+.book div div {
+    display: none;
+}
+
+.book div div div, .book div div a {
+    z-index: 1;
+    padding: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    position: relative;
+    margin: auto;
+    max-width: 4em;
+    text-align: center;
+}
+
+.book div div div:hover, .book div div a:hover, .book div div div:focus, .book div div a:focus {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.book div div a {
+    top: -7em;
+    text-decoration: none;
+}
+
+.book div div div {
+    top: -6em;
+}
+
+.book div img {
+    height: 11em;
+    width: 6.6em;
+    position: relative;
+    top: 2em;
+    margin: auto;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    box-shadow: 5px 5px 8px black;
+    transition: transform 1s, opacity 1s;
+    -webkit-transition: transform 1s ease;
+}
+
+.book div img:hover, .book div img:focus {
+    opacity: 0.5;
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    cursor: pointer;
+}
+
+footer {
+    height: 7em;
+    margin-top: 0.5em;
+    background-color: #666;
+    text-align: center;
+}
+
+footer > p {
+    color: white;
+    position: relative;
+    top: 45%;
+}
+
+.newsletter, .welcome {
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.flexbox {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+.form {
+    background-color: #dddddd;
+    border: 0.5em groove gold;
+    height: auto;
+    width: auto;
+    padding: 2em;
+    margin-top: 10%;
+}
+
+.welcomeMessage {
+    background-image: url("images/bookshelf3.jpg");
+    background-size: cover;
+    border: 0.5em groove gold;
+    height: auto;
+    width: auto;
+    padding: 2em;
+    margin-top: 10%;
+}
+
+#welcomeMessage {
+    text-shadow: 0.08em 0.08em black;
+    text-align: center;
+    color: white;
+    font-size: 250%;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 50px;
+    overflow: auto;
+    overflow-scrolling: auto;
+    -webkit-overflow-scrolling: auto;
+}
+
+.score {
+    color: white;
+    font-size: 5vw;
+    text-align: right;
+    position: fixed;
+    top: 0.2em;
+    right: 3em;
+    transition: top 1s, right 1s, font-size 1s;
+}
+
+.close, .fa-redo {
+    color: white;
+    position: fixed;
+    transition: color 0.3s;
+}
+
+.close {
+    font-size: 5vw;
+    top: 0.2em;
+    right: 1em;
+    transition: font-size 0.5s;
+}
+
+.fa-redo {
+    font-size: 3vw;
+    top: 0.9em;
+    right: 3em;
+    transition: transform 1s;
+}
+
+.fa-redo:hover, .fa-redo:focus {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+.close:hover, .fa-redo:hover, .close:focus, .fa-redo:focus {
+    color: #bbb;
+    cursor: pointer;
+}
+
+.gridarea {
+    padding: 1em 2em 1em 2em;
+    margin-bottom: 1em;
+    background-color: white;
+}
+
+.gridarea:hover, .gridarea:focus {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.trivia {
+    display: block;
+    max-width: 40%;
+    max-height: 80%;
+    float: left;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+@media screen and (max-width: 780px) {
+
+    .col-80, .col-33 {
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .col-20 {
+        width: 100%;
+        float: none;
+    }
+
+    .col-20 > .book {
+        width: 33.33%;
+        float: left;
+        border: 0.1em solid white;
+    }
+
+    .trivia {
+        width: 100%;
+        float: none;
+    }
+
+    .questions {
+        width: 100%;
+        float: none;
+        margin-top: 1em;
+    }
+}
