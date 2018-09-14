@@ -50,18 +50,21 @@
 <div class="row clearfix">
     <div class="col-100">
         <section class="main">
-            <form>
+            <button style="padding: 1em; margin: 1em; float: right;">Edit</button>
+            <button style="padding: 1em; margin: 1em; float: right;">Save</button>
+            <form style="float: left;">
+                <p class="username" style="margin: 0 1em 1em 1em;"></p>
                 <img class="profilepic" title="Richelle E. Goodrich" src="images/default.jpg"
                      alt="Richelle E. Goodrich" height="200px" width="200px"
                      style="margin: 1em; border: 1px solid black;"/><br/>
-                <input class="file" type="file" onclick="setProfilePic()" style="margin-left: 1.5em;"/><br/><br/>
-                <p class="username" style="margin: 0 1em 1em 1em;"></p>
+                <input class="file" type="file" onclick="" style="margin-left: 1.5em;"/><br/><br/>
             </form>
             <script>
                 document.getElementsByClassName("username")[0].innerHTML = localStorage.getItem("name");
             </script>
-            <article>
-
+            <article style="text-align: left;">
+                <h2>Bio</h2><br/>
+                <textarea height="20em" width="40em"></textarea>
             </article>
         </section>
     </div>

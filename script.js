@@ -3,8 +3,6 @@ let trivia = document.getElementsByClassName("trivia")[0];
 let score = document.getElementsByClassName("score")[0];
 let newsletter = document.getElementsByClassName("newsletter")[0];
 let welcome = document.getElementsByClassName("welcome")[0];
-let file = document.getElementsByClassName("file")[0];
-let profilepic = document.getElementsByClassName("profilepic")[0];
 let buttons = document.getElementsByClassName("buttons");
 let bookSrcs = document.getElementsByClassName("bookImg");
 let questions = document.getElementsByClassName("questions");
@@ -158,8 +156,4 @@ function saveUser() {
 
 function closeWelcome() {
     welcome.style.display = "none";
-}
-
-function setProfilePic() {
-    profilepic.src = file.innerHTML;
 }
