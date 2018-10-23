@@ -50,10 +50,19 @@
 <div class="row clearfix">
     <div class="col-100">
         <section class="main">
-            <button style="padding: 1em; margin: 1em; float: right;">Edit</button>
-            <button style="padding: 1em; margin: 1em; float: right;">Save</button>
+            <button style="padding: 1em; margin: 1em; float: right;"
+                    onclick="document.getElementById('bio').style.visibility = 'visible';
+                    ">Edit
+            </button>
+            <button style="padding: 1em; margin: 1em; float: right;"
+                    onclick="
+                    localStorage.setItem('bio', document.getElementById('bio').innerText);
+                    document.getElementById('bio').style.visibility = 'hidden';
+                    document.getElementById('userBio').innerText = localStorage.getItem('bio');
+                    ">Save
+            </button>
             <form style="float: left;">
-                <p class="username" style="margin: 0 1em 1em 1em;"></p>
+                <p class="username" style="margin: 1em 1em 0.5em 1em; font-size: 24px;"></p>
                 <img class="profilepic" title="Richelle E. Goodrich" src="images/default.jpg"
                      alt="Richelle E. Goodrich" height="200px" width="200px"
                      style="margin: 1em; border: 1px solid black;"/><br/>
@@ -64,7 +73,11 @@
             </script>
             <article style="text-align: left;">
                 <h2>Bio</h2><br/>
-                <textarea height="20em" width="40em"></textarea>
+                <h3 id="userBio"></h3>
+                <script>
+                        document.getElementById('userBio').innerText = localStorage.getItem('bio');
+                </script>
+                <textarea id="bio" height="20em" width="40em" style="visibility: hidden; resize: none;"></textarea>
             </article>
         </section>
     </div>
