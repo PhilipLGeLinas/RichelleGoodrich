@@ -1,2 +1,2 @@
-# richellegoodrich
-A Website Designed for Author Richelle E. Goodrich
+# RichelleGoodrich
+A website designed for author Richelle E. Goodrich
