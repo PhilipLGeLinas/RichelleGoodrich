@@ -1,3 +1,4 @@
-# Package Files #
+# Package Files
+*.idea
 *.iml
 *.xml
